@@ -7,7 +7,7 @@
   <link rel="SHORTCUT ICON" type="image/png" href="images/favicon.png" />
 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
- <link rel="stylesheet" type="text/css" href="css/main.css">
+  <link rel="stylesheet" type="text/css" href="css/main.css">
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -23,7 +23,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>                        
       </button>
-      <a class="navbar-brand" href="#"><b>ДТ</b></a>
+      <a class="navbar-brand" href="#"><b>Обучение</b></a>
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
@@ -53,8 +53,7 @@
     </div>
     <div class="col-sm-8 text-left"> 
       <h1>Реши примеры:</h1>
-      <h2>Сложение</h2>
-      	<input type="range" min="1" max="10">
+      <h2 class="examples">Сложение</h2>
           <label>А.</label>
           <input type="text" id="a1" disabled>
           <label for="a2">+</label>
@@ -143,54 +142,6 @@
   </div>
 </div>
 
-<script>
-	var taskID = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j"];
-	var rusTaskID = ["А - ", "Б - ", "В - ", "Г - ", "Д - ",
-									"Е - ", "Ж - ", "З - ", "И - ", "К - "];
-	var arrVal = [];
-
-	for (var i = 0; i < taskID.length; i++) {
-		arrVal[i] = new Array();
-		arrVal[i][0] = 0;
-		arrVal[i][1] = 1;
-		while (arrVal[i][0] < arrVal[i][1]) {
-		  document.getElementById(taskID[i] + '1').value = getRandomInt();
-		  document.getElementById(taskID[i] + '2').value = getRandomInt();
-		  arrVal[i][0] = +document.getElementById(taskID[i] + '1').value;
-		  arrVal[i][1] = +document.getElementById(taskID[i] + '2').value;
-		}
-		if (i < 5) {
-			arrVal[i][2] = arrVal[i][0] + arrVal[i][1]; 
-		} else {
-			arrVal[i][2] = arrVal[i][0] - arrVal[i][1]; 
-		}
-	}
-
-	function checkForAlert(arrVal) {
-		var strAlert ="Результат:\n";
-		for (var i = 0; i < taskID.length; i++) {
-			arrVal[i][3] = document.getElementById(taskID[i] + '3').value;	
-			if (String(arrVal[i][2]) !== arrVal[i][3]) {
-				strAlert += rusTaskID[i] + "Неправильно\n";
-			} else {
-				strAlert += rusTaskID[i] + "ОК\n";
-			}
-		}
-	  return alert(strAlert);
-	}	
-		// Возвращает случайное целое число между min (включительно) и max (не включая max)
-	function getRandomInt() {
-		var min = 1;
-		var	max = 10;
-	  return Math.floor(Math.random() * (max - min)) + min;
-	}
-
-	/* 
-	  if (window.localStorage) {
-	    var elements = document.querySelectorAll('[name]');
-	    }
-	} */
-	</script>
-
+<script src="js/main.js"></script>
 </body>
 </html>
