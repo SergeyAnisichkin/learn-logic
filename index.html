@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="SHORTCUT ICON" type="image/png" href="images/favicon.png" />
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+ <link rel="stylesheet" type="text/css" href="css/main.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#"><b>ДТ</b></a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">!!!</a></li>
+        <li><a href="#">Математика</a></li>
+        <li><a href="#">Память</a></li>
+        <li><a href="#">Таблицы</a></li>
+        <li><a href="testjs.html">ТЕСТ</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Войти</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+  
+<div class="container-fluid text-left">    
+  <div class="row content">
+    <div class="col-sm-2 sidenav">
+      <p><a href="index.html">Сложение и вычитание</a></p>
+      <p><a href="bigcalc.html">Большие примеры</a></p>
+      <p><a href="compare.html">Сравнение чисел</a></p>
+      <button class="btn btn-primary" onclick="checkForAlert(arrVal);">Проверить <img src="images/check-4x.png" alt=""></button>
+      <br>
+      <br>
+      <button  class="btn btn-warning" onclick="javascript:location.reload()">Обновить <img src="images/reload-4x.png" alt=""></button>
+    </div>
+    <div class="col-sm-8 text-left"> 
+      <h1>Реши примеры:</h1>
+      <h2>Сложение</h2>
+      	<input type="range" min="1" max="10">
+          <label>А.</label>
+          <input type="text" id="a1" disabled>
+          <label for="a2">+</label>
+          <input type="text" id="a2" disabled>
+          <label for="a3">=</label>
+          <input type="text" id="a3" autocomplete="off" >
+          <br>
+          <label>Б.</label>
+          <input type="text" id="b1" disabled>
+          <label>+</label>
+          <input type="text" id="b2" disabled>
+          <label>=</label>
+          <input type="text" id="b3" autocomplete="off" >
+          <br>
+          <label>В.</label>
+          <input type="text" id="c1" disabled>
+          <label>+</label>
+          <input type="text" id="c2" disabled>
+          <label>=</label>
+          <input type="text" id="c3" autocomplete="off" >
+          <br>
+          <label>Г.</label>
+          <input type="text" id="d1" disabled>
+          <label>+</label>
+          <input type="text" id="d2" disabled>
+          <label>=</label>
+          <input type="text" id="d3" autocomplete="off" >
+          <br>
+          <label>Д.</label>
+          <input type="text" id="e1" disabled>
+          <label>+</label>
+          <input type="text" id="e2" disabled>
+          <label>=</label>
+          <input type="text" id="e3" autocomplete="off" >
+          <br>
+          <br>
+      <h2>Вычитание</h2>
+          <label>Е.</label>
+          <input type="text" id="f1" disabled>
+          <label>-</label>
+          <input type="text" id="f2" disabled>
+          <label>=</label>
+          <input type="text" id="f3" autocomplete="off" >
+          <br>
+          <label>Ж.</label>
+          <input type="text" id="g1" disabled>
+          <label>-</label>
+          <input type="text" id="g2" disabled>
+          <label>=</label>
+          <input type="text" id="g3" autocomplete="off" >
+          <br>
+          <label>З.</label>
+          <input type="text" id="h1" disabled>
+          <label>-</label>
+          <input type="text" id="h2" disabled>
+          <label>=</label>
+          <input type="text" id="h3" autocomplete="off" >
+          <br>
+          <label>И.</label>
+          <input type="text" id="i1" disabled>
+          <label>-</label>
+          <input type="text" id="i2" disabled>
+          <label>=</label>
+          <input type="text" id="i3" autocomplete="off" >
+          <br>
+          <label>К.</label>
+          <input type="text" id="j1" disabled>
+          <label>-</label>
+          <input type="text" id="j2" disabled>
+          <label>=</label>
+          <input type="text" id="j3" autocomplete="off" >
+          <br>
+          <br>
+      		<div class="buttons">
+
+      		</div>
+    </div>
+    <div class="col-sm-2 sidenav">
+      <div class="well">
+        <p>****</p>
+      </div>
+      <div class="well">
+        <p>****</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+	var taskID = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j"];
+	var rusTaskID = ["А - ", "Б - ", "В - ", "Г - ", "Д - ",
+									"Е - ", "Ж - ", "З - ", "И - ", "К - "];
+	var arrVal = [];
+
+	for (var i = 0; i < taskID.length; i++) {
+		arrVal[i] = new Array();
+		arrVal[i][0] = 0;
+		arrVal[i][1] = 1;
+		while (arrVal[i][0] < arrVal[i][1]) {
+		  document.getElementById(taskID[i] + '1').value = getRandomInt();
+		  document.getElementById(taskID[i] + '2').value = getRandomInt();
+		  arrVal[i][0] = +document.getElementById(taskID[i] + '1').value;
+		  arrVal[i][1] = +document.getElementById(taskID[i] + '2').value;
+		}
+		if (i < 5) {
+			arrVal[i][2] = arrVal[i][0] + arrVal[i][1]; 
+		} else {
+			arrVal[i][2] = arrVal[i][0] - arrVal[i][1]; 
+		}
+	}
+
+	function checkForAlert(arrVal) {
+		var strAlert ="Результат:\n";
+		for (var i = 0; i < taskID.length; i++) {
+			arrVal[i][3] = document.getElementById(taskID[i] + '3').value;	
+			if (String(arrVal[i][2]) !== arrVal[i][3]) {
+				strAlert += rusTaskID[i] + "Неправильно\n";
+			} else {
+				strAlert += rusTaskID[i] + "ОК\n";
+			}
+		}
+	  return alert(strAlert);
+	}	
+		// Возвращает случайное целое число между min (включительно) и max (не включая max)
+	function getRandomInt() {
+		var min = 1;
+		var	max = 10;
+	  return Math.floor(Math.random() * (max - min)) + min;
+	}
+
+	/* 
+	  if (window.localStorage) {
+	    var elements = document.querySelectorAll('[name]');
+	    }
+	} */
+	</script>
+
+</body>
+</html>

@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>ДТ Сложные примеры</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="SHORTCUT ICON" type="image/png" href="images/favicon.png" />
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+ <link rel="stylesheet" type="text/css" href="css/main.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#"><b>ДТ</b></a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">!!!</a></li>
+        <li><a href="#">Математика</a></li>
+        <li><a href="#">Память</a></li>
+        <li><a href="#">Таблицы</a></li>
+        <li><a href="testjs.html">ТЕСТ</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Войти</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+  
+<div class="container-fluid text-left">    
+  <div class="row content">
+    <div class="col-sm-2 sidenav">
+      <p><a href="index.html">Сложение и вычитание</a></p>
+      <p><a href="bigcalc.html">Большие примеры</a></p>
+      <p><a href="compare.html">Сравнение чисел</a></p>
+      <button class="btn btn-primary" onclick="checkForAlert(arrVal);">Проверить</button>
+      <br>
+      <br>
+      <button  class="btn btn-warning" onclick="javascript:location.reload()">Обновить</button>
+    </div>
+    <div class="col-sm-8 text-left"> 
+      <h2>Сравнение чисел</h2>
+          <label>А.</label>
+          <input type="text" id="a1" disabled>
+          <select id="a2">
+            <option selected="selected" disabled>&#9830</option>
+            <option>&#60</option>
+            <option>=</option>
+            <option>&#62</option>
+          </select>
+          <input type="text" id="a3" disabled>
+          <br>
+          <label>Б.</label>
+          <input type="text" id="b1" disabled>
+          <select id="b2">
+            <option selected="selected" disabled>&#9830</option>
+            <option>&#60</option>
+            <option>=</option>
+            <option>&#62</option>
+          </select>
+          <input type="text" id="b3" disabled>
+          <br>
+          <label>В.</label>
+          <input type="text" id="c1" disabled>
+          <select id="c2">
+            <option selected="selected" disabled>&#9830</option>
+            <option>&#60</option>
+            <option>=</option>
+            <option>&#62</option>
+          </select>
+          <input type="text" id="c3" disabled>
+          <br>
+          <label>Г.</label>
+          <input type="text" id="d1" disabled>
+          <select id="d2">
+            <option selected="selected" disabled>&#9830</option>
+            <option>&#60</option>
+            <option>=</option>
+            <option>&#62</option>
+          </select>
+          <input type="text" id="d3" disabled>
+          <br>
+          <label>Д.</label>
+          <input type="text" id="e1" disabled>
+          <select id="e2">
+            <option selected="selected" disabled>&#9830</option>
+            <option>&#60</option>
+            <option>=</option>
+            <option>&#62</option>
+          </select>
+          <input type="text" id="e3" disabled>
+          <br>
+          <label>Е.</label>
+          <input type="text" id="f1" disabled>
+          <select id="f2">
+            <option selected="selected" disabled>&#9830</option>
+            <option>&#60</option>
+            <option>=</option>
+            <option>&#62</option>
+          </select>
+          <input type="text" id="f3" disabled>
+          <br>
+          <label>Ж.</label>
+          <input type="text" id="g1" disabled>
+          <select id="g2">
+            <option selected="selected" disabled>&#9830</option>
+            <option>&#60</option>
+            <option>=</option>
+            <option>&#62</option>
+          </select>
+          <input type="text" id="g3" disabled>
+          <br>
+          <label>З.</label>
+          <input type="text" id="h1" disabled>
+          <select id="h2">
+            <option selected="selected" disabled>&#9830</option>
+            <option>&#60</option>
+            <option>=</option>
+            <option>&#62</option>
+          </select>
+          <input type="text" id="h3" disabled>
+          <br>
+          <label>И.</label>
+          <input type="text" id="i1" disabled>
+          <select id="i2">
+            <option selected="selected" disabled>&#9830</option>
+            <option>&#60</option>
+            <option>=</option>
+            <option>&#62</option>
+          </select>
+          <input type="text" id="i3" disabled>
+          <br>
+          <label>К.</label>
+          <input type="text" id="j1" disabled>
+          <select id="j2">
+            <option selected="selected" disabled>&#9830</option>
+            <option>&#60</option>
+            <option>=</option>
+            <option>&#62</option>
+          </select>
+          <input type="text" id="j3" disabled>
+
+    </div>
+    <div class="col-sm-2 sidenav">
+      <div class="well">
+        <p>****</p>
+      </div>
+      <div class="well">
+        <p>****</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  "use strict"
+	var taskID = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j"];
+	var rusTaskID = ["А - ", "Б - ", "В - ", "Г - ", "Д - ",
+									"Е - ", "Ж - ", "З - ", "И - ", "К - "];
+	var arrVal = [];
+
+	for (var i = 0; i < taskID.length; i++) {
+		arrVal[i] = new Array();
+    document.getElementById(taskID[i] + '1').value = getRandomInt();
+    document.getElementById(taskID[i] + '3').value = getRandomInt();
+    arrVal[i][0] = +document.getElementById(taskID[i] + '1').value;
+    arrVal[i][2] = +document.getElementById(taskID[i] + '3').value;
+    if (arrVal[i][0] < arrVal[i][2]) {
+      arrVal[i][1] = "<";
+			} else if (arrVal[i][0] > arrVal[i][2]) {
+				arrVal[i][1] = ">";
+			} else {
+        arrVal[i][1] = "="
+      }
+	}
+
+	function checkForAlert(arrVal) {
+		var strAlert ="Результат:\n";
+		for (var i = 0; i < taskID.length; i++) {
+			arrVal[i][3] = document.getElementById(taskID[i] + '2').value;	
+			if (arrVal[i][1] === arrVal[i][3]) {
+				strAlert += rusTaskID[i] + "ОК\n";
+			} else {
+				strAlert += rusTaskID[i] + "Неправильно\n";
+			}
+		}
+	  return alert(strAlert);
+	}	
+		// Возвращает случайное целое число между min (включительно) и max (не включая max)
+	function getRandomInt() {
+		var min = 1;
+		var	max = 30;
+	  return Math.floor(Math.random() * (max - min)) + min;
+	}
+
+	/* 
+	  if (window.localStorage) {
+	    var elements = document.querySelectorAll('[name]');
+	    }
+	} */
+	</script>
+
+</body>
+</html>
